@@ -1,15 +1,15 @@
 {
   "name": "cblapi",
-  "version": "1.0.7",
-  "description": "",
+  "version": "1.0.8",
+  "description": "An Official module to interact with the claybotlist API",
   "main": "claybotlist.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "dependencies": {
     "axios": "^0.21.1",
     "qs": "^6.9.6"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Clay-Devs",
+  "license": "ISC",
+  "keywords": [
+    "discord", "bot", "api", "list", "botlist", "javascript", "js"
+  ]
 }
