@@ -1,6 +1,6 @@
 {
   "name": "cblapi",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "An Official module to interact with the claybotlist API",
   "main": "claybotlist.js",
   "dependencies": {

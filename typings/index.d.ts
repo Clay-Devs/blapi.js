@@ -1,8 +1,8 @@
-export = CBLAPI;
+export = CBL;
 import { EventEmitter } from 'events';
 
-declare class CBLAPI extends EventEmitter {
-  constructor(token: string, options: CBLAPI.CBLOptions, client?: object);
+declare class CBL extends EventEmitter {
+  constructor(token: string, options: CBL.CBLOptions, client?: object);
   constructor(token: string, client?: object);
 
   public postStats(
@@ -10,11 +10,11 @@ declare class CBLAPI extends EventEmitter {
     shardId?: number,
     shardCount?: number
   ): Promise<object>;
-  public getStats(id: string): Promise<CBLAPI.BotStats>;
-  public getBot(id: string): Promise<CBLAPI.Bot>;
-  public getUser(id: string): Promise<CBLAPI.User>;
-  public getBots(query: CBLAPI.BotsQuery): Promise<CBLAPI.BotSearchResult>;
-  public getVotes(): Promise<CBLAPI.Vote[]>;
+  public getStats(id: string): Promise<CBL.BotStats>;
+  public getBot(id: string): Promise<CBL.Bot>;
+  public getUser(id: string): Promise<CBL.User>;
+  public getBots(query: CBL.BotsQuery): Promise<CBL.BotSearchResult>;
+  public getVotes(): Promise<CBL.Vote[]>;
   public hasVoted(id: string): Promise<boolean>;
 
   public token?: string;
@@ -30,13 +30,9 @@ declare class CBLAPI extends EventEmitter {
 }
 
 
-declare namespace CLAYAPI {
+declare namespace CBL {
   export type CBLOptions = {
     statsInterval?: number;
-    webhookPort?: number;
-    webhookAuth?: string;
-    webhookPath?: string;
-    webhookServer?: Server;
   };
 
   export type BotStats = {

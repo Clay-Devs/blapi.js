@@ -26,8 +26,25 @@ cbl.on('error', err => {
     console.error(`Oops! ${err}`)
 })
 
+
+// Usage
+client.on('ready', () => {
+    cbl.postStats(client.guilds.cache.size, client.shard.id, client.shard.count)//if using sharding
+    cbl.postStats(client.guilds.cache.size) // no sharding
+})
+
 ```
 
 ## Documentation
 
 ~~being worked on~~
+
+## Changelog
+
+### v1.0.9
+  Remove unused code
+  Update Vote api
+  Simplified the TypeScript files
+
+### v1.0.8 and below
+<<<  Not Supported  >>>

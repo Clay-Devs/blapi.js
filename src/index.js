@@ -1,5 +1,4 @@
 const EventEmitter = require('events');
-const { Agent } = require('https');
 const qs = require('querystring');
 
 
@@ -68,12 +67,6 @@ class CBL extends EventEmitter {
         */
 async _request(method, endpoint, data) {
             return new Promise(async (resolve, reject) => {
-                const response = {
-                    raw: '',
-                    body: null,
-                    status: null,
-                    headers: null,
-                }
 
                 const opt = {
                     hostname: 'https://botlist.derkleineme.repl.co',
@@ -106,34 +99,6 @@ async _request(method, endpoint, data) {
 
                     resolve(200)
                 }
-/*
-                const req = https.request(opt, res => {
-                    response.status = res.statusCode
-                    response.headers = res.headers
-                    response.ok = res.statusCode >= 200 && res.statusCode < 300
-                    response.statusText = res.statusMessage
-                    res.on('data', chunk => {
-                        response.raw += chunk
-                    })
-                    res.on('end', () => {
-                        response.body = res.headers['content-type'].includes('application/json') ? JSON.parse(response.raw) : response.raw
-                        if(response.ok) {
-                            resolve(response)
-                        } else {
-                            var err = new Error(`${res.statusCode} ${res.statusMessage}`)
-                            Object.assign(err, response)
-                            reject(err)
-                        }
-                    })
-                })
-
-                req.on('error', err => {
-                    reject(err)
-                })
-
-                if(data && method === "post") req.write(JSON.stringify(data));
-                req.end()
-                */
             });
         }
    
