@@ -1,36 +1,36 @@
-# CLay Bot List API | cblapi
+# Botlist.xyz API | cblapi
 
-Official module for interacting with the claybotlist API
+Official module for interacting with the botlist.xyz API
 
 ## Installation
 ```sh
-npm install cblapi
+npm install blapi.js
 ```
 
 ## Example
 
 ```js
-const CBL = require('cblapi')
+const BL = require('blapi.js')
 const Discord = require('discord.js')
 const client = new Discord.Client()
-const cbl = new CBL('CBL Token', client)
+const bl = new BL('BL Token', client)
 
 
 // Events
 
-cbl.on('posted', () => {
+bl.on('posted', () => {
     console.log('Succesfully posted!')
 })
 
-cbl.on('error', err => {
+bl.on('error', err => {
     console.error(`Oops! ${err}`)
 })
 
 
 // Usage
 client.on('ready', () => {
-    cbl.postStats(client.guilds.cache.size, client.shard.id, client.shard.count)//if using sharding
-    cbl.postStats(client.guilds.cache.size) // no sharding
+    bl.postStats(client.guilds.cache.size, client.shard.id, client.shard.count)//if using sharding
+    bl.postStats(client.guilds.cache.size) // no sharding
 })
 
 ```
@@ -41,6 +41,10 @@ client.on('ready', () => {
 
 ## Changelog
 
+### v1.1.0
+  Performance tweaks <br>
+### v1.1.0-prebuild  
+rebranded all tools
 ### v1.0.9
   Remove unused code <br>
   Update Vote api <br>

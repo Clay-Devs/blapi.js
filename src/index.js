@@ -69,7 +69,7 @@ async _request(method, endpoint, data) {
             return new Promise(async (resolve, reject) => {
 
                 const opt = {
-                    hostname: 'https://botlist.derkleineme.repl.co',
+                    hostname: 'https://botlist.xyz',
                     path: `/api/${endpoint}/`,
                     method,
                     headers: {},
