@@ -1,8 +1,8 @@
-export = CBL;
+export = BL;
 import { EventEmitter } from 'events';
 
-declare class CBL extends EventEmitter {
-  constructor(token: string, options: CBL.CBLOptions, client?: object);
+declare class BL extends EventEmitter {
+  constructor(token: string, options: BL.BLOptions, client?: object);
   constructor(token: string, client?: object);
 
   public postStats(
@@ -10,11 +10,11 @@ declare class CBL extends EventEmitter {
     shardId?: number,
     shardCount?: number
   ): Promise<object>;
-  public getStats(id: string): Promise<CBL.BotStats>;
-  public getBot(id: string): Promise<CBL.Bot>;
-  public getUser(id: string): Promise<CBL.User>;
-  public getBots(query: CBL.BotsQuery): Promise<CBL.BotSearchResult>;
-  public getVotes(): Promise<CBL.Vote[]>;
+  public getStats(id: string): Promise<BL.BotStats>;
+  public getBot(id: string): Promise<BL.Bot>;
+  public getUser(id: string): Promise<BL.User>;
+  public getBots(query: BL.BotsQuery): Promise<BL.BotSearchResult>;
+  public getVotes(): Promise<BL.Vote[]>;
   public hasVoted(id: string): Promise<boolean>;
 
   public token?: string;
@@ -30,8 +30,8 @@ declare class CBL extends EventEmitter {
 }
 
 
-declare namespace CBL {
-  export type CBLOptions = {
+declare namespace BL {
+  export type BLOptions = {
     statsInterval?: number;
   };
 

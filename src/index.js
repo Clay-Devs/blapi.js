@@ -13,7 +13,7 @@ const getLib = (lib, client) => {
 
 const supportedlib = client => getLib('discord.js', client) || getLib('eris', client)
 
-class CBL extends EventEmitter {
+class BL extends EventEmitter {
    /**
     * @param {string} token
     * @param {Object} [options]
@@ -55,7 +55,7 @@ class CBL extends EventEmitter {
                }, this.options.statsInterval)
              })
        } else if (client) {
-           console.error(`[Clay Bot List] The Client provided is not supported`)
+           console.error(`[Bot List] The Client provided is not supported`)
        }
     }
        /**
@@ -79,7 +79,7 @@ async _request(method, endpoint, data) {
                 if(this.token) {
                     opt.headers.authorization = this.token;
                 } else {
-                    console.warn(`[Clay Bot List] No CBL token provided`) // eslint-disable-line no-console
+                    console.warn(`[Bot List] No BL token provided`) // eslint-disable-line no-console
                 }
 
                 if(data && method === 'post') opt.headers['content-type'] = 'application/json'
@@ -188,4 +188,4 @@ async _request(method, endpoint, data) {
 
 }
 
-module.exports = CBL;
+module.exports = BL;

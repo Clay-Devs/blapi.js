@@ -1,8 +1,8 @@
 {
-  "name": "cblapi",
-  "version": "1.0.9",
-  "description": "An Official module to interact with the claybotlist API",
-  "main": "claybotlist.js",
+  "name": "blapi.js",
+  "version": "1.1.0",
+  "description": "An Official module to interact with the botlist.xyz API",
+  "main": "botlist.js",
   "dependencies": {
     "axios": "^0.21.1",
     "qs": "^6.9.6"

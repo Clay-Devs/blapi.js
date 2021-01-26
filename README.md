@@ -42,9 +42,9 @@ client.on('ready', () => {
 ## Changelog
 
 ### v1.0.9
-  Remove unused code
-  Update Vote api
-  Simplified the TypeScript files
+  Remove unused code <br>
+  Update Vote api <br>
+  Simplified the TypeScript files <br>
 
 ### v1.0.8 and below
 <<<  Not Supported  >>>
